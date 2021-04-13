@@ -111,6 +111,7 @@ nav a:hover{
     }
     .logo{
         grid-column: 2/3;
+        align-self: center;
     }
     nav{
         all: unset;
@@ -148,6 +149,7 @@ nav a:hover{
         margin-left: 1em;
         margin-bottom: 0;
     }
+    
 }
 @media  screen and (min-width:500px) {
     header{
@@ -178,5 +180,48 @@ nav a:hover{
         margin-left: 3em;
         margin-bottom: 0;
     }
-    
+   
+}
+/* footer css here */
+footer{
+    /* display: grid;
+    grid-template-columns:auto 1fr 1fr 2fr;
+    background: grey; */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: grey;
+    padding: 1em;
+}
+
+footer :is(.contact-form){
+    display: grid;
+    grid-template-columns: 1fr;
+}
+footer a {
+    text-decoration: none;
+    color: yellowgreen; 
+}
+
+footer form{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    row-gap: .3em;
+}
+
+/* .contact-details :is(p){
+    padding-left: 5em;
+} */
+@media  screen and (max-width:850px) {
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        align-content: center;
+    }
+    footer :is(button){
+        max-width: 100%;
+        align-self: left;
+    }
 }
