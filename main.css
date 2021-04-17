@@ -1,5 +1,5 @@
 :root{
-    --background: rgba(255,255,255,.20);
+    --background: rgba(255,255,255,.80);
     --blue:#32375D;
     --gold:#CAA73A;
     --accent:#F7F6EF;
@@ -8,9 +8,13 @@
     box-sizing:border-box;
 }
 body{
+    width: 100%;
     margin: 0;
+    padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
+    background: var(--accent);
 }
 
 /* Navigation styles start here bude */
@@ -64,6 +68,7 @@ nav{
     right: 0;
     padding-right:1em;
     width: 50%;
+    z-index: 999;
     transform: scale(1,0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
@@ -182,37 +187,117 @@ nav a:hover{
     }
    
 }
+
+/* Hero image */
+.Top-Hero{
+    margin: 0;
+    padding: 0;
+   
+}
+.hero-image{
+    top:0;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: center center;
+    margin: 0;
+}
+
+.hero-text{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    right: auto;
+    align-self: center;
+    transition: translate(-50%, -50%);
+
+}
+
+@media screen and (max-width:750px){
+    .hero-text{
+        top:40%;
+        left:15%;
+        max-width: 70%;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width:360px){
+    .hero-text{
+        top:15%;
+        text-align: center;
+        left:15%;
+        max-width: 70%;
+    }
+    
+}
+
+
+/* End */
+
+
+
+
 /* Content/body css */
 .content{
     background: var(--accent);
-    padding: 2em;
+    margin-top: 0;
+}
+.content h2{
+    text-align: center;
 }
 .cards{
     display: inline-flex;
     flex-flow: wrap;
+    justify-content: center;
     margin: 4em 0 4em 0;
-
+    background: inherit;
+    background-repeat: no-repeat;
 }
 .card{
     border-radius: 1em;
-    max-width: 30%;
+    max-width: 370px;
+    height: 215px;
     margin: auto;
     padding: .5em;
     text-align: center;
     box-shadow: .1em .2em .3em .4em var(--gold);
     margin: 1em;
+    background: #fff;
+}
+
+.card :is(button){
+    background: var(--gold);
+    padding: .5em;
+    border-style: none;
+    border: 1px solid var(--blue);
+    border-radius: .3em;
 }
 .card-fa{
     font-size: 4em;
 }
 
 
+/* Sponsors Section */
+.clients{
+    background: grey;
+    text-align: center;
+    padding: 2em;
+}
+.clients-logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-
-
-
-
-
+}
+.client{
+    margin-top:1em;
+    height: 6em;
+    width: 8em;
+    background: var(--gold);
+    border-radius: .3em;
+}
 
 
 
@@ -289,4 +374,48 @@ footer button{
     padding: .5em;
     width: 60%;
     margin: auto;
+}
+/* Services Css */
+.intro{
+    text-align: left;
+    background: #fff;
+    width: 90%;
+    margin: 6em auto 3em auto;
+    padding: 1em;
+    border-radius:.3em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.text-body{
+    text-align: left;
+}
+.text-body p{
+    text-align: justify;
+}
+.services{
+    margin: 3em auto 3em auto;
+    display: flex;
+    justify-content: center;
+}
+.service{
+    width:90%;
+    background: #fff;
+    border-radius: .3em;
+    text-align: left;
+    display: grid;
+    grid-template-columns:  repeat(4,1fr);
+    padding: 1em;
+}
+.icon{
+    grid-column: 1/2;
+    font-size: 6em;
+}
+.service .service-discription{
+    text-align: justify;
+}
+.services .header .icon{
+    grid-column: 1/2;
+}
+.services .service-discription{
+    grid-column: 2/5;
 }
