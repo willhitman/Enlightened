@@ -91,6 +91,18 @@ nav a {
   opacity: 0;
   transition: opacity 100ms ease-in-out;
 }
+nav .active{
+  background: var(--gold);
+  padding: .5em;
+  border-radius:.3em;
+  width: 100%;
+  transition: transform 400ms ease-in-out;
+}
+nav .active:hover{
+  border-radius: 0 0 .3em .3em;
+  background: var(--blue);
+}
+
 nav a:hover {
   color: var(--gold);
 }
@@ -132,7 +144,7 @@ nav a:hover {
     content: "";
     display: block;
     height: 5px;
-    background: black;
+    background: var(--gold);
     position: absolute;
     top: -0.25em;
     left: 0;
@@ -450,3 +462,21 @@ footer button {
     grid-column: 1/5;
   }
 }
+
+/* Contact Page */
+
+.main-content{
+    display: flex;
+    margin: 6em 0 3em 0;
+}
+.contact-page form{
+    padding: 0 1em 0 1em;
+    display: grid;
+    row-gap: .3em;
+}
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
