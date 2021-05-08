@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 :root {
   --background: rgba(255, 255, 255, 0.8);
   --blue: #32375d;
@@ -13,8 +16,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: Quicksand, sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   background: var(--accent);
@@ -309,11 +311,31 @@ footer {
     grid-template-columns:auto 1fr 1fr 2fr;
     background: grey; */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-content: center;
   background: #6d726d;
   padding: 1em;
+  height: auto;
 }
+.Site-map{
+  margin: 1em;
+}
+
+.logo-name{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name-and-address{
+  padding:1em;
+}
+.phone-numbers{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 
 h1,
 h2,
@@ -323,7 +345,7 @@ h5,
 h6 {
   color: var(--blue);
 }
-footer a {
+footer :is(a, p) {
   text-decoration: none;
   color: var(--gold);
 }
@@ -333,16 +355,21 @@ footer ul {
   padding: 0;
 }
 
-footer form {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: auto;
-  row-gap: 0.3em;
+.contact-form{
+  margin: 1em 1em 1em 1em;
 }
 
-/* .contact-details :is(p){
-    padding-left: 5em;
-} */
+footer form {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  margin:auto;
+  row-gap: 0.1em;
+}
+
+.contact-details{
+    margin: 1em;
+}
 @media screen and (max-width: 850px) {
   footer {
     flex-direction: column;
