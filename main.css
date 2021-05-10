@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
   --background: rgba(255, 255, 255, 0.8);
@@ -12,6 +11,30 @@
 *::after {
   box-sizing: border-box;
 }
+
+
+
+
+h1{
+  font-size: 5.50em; 
+  font-weight: bold;
+}
+h2{
+  font-size: 4em;
+}
+.h3{
+  font-size: 2.75em;
+}
+
+h4{
+  font-size:1.75em;
+}
+.card :is(figcaption){
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--blue);
+}
+
 body {
   width: 100%;
   margin: 0;
@@ -29,6 +52,7 @@ header {
   z-index: 999;
   width: 100%;
   background: var(--background);
+  align-items: center;
 }
 
 .nav-toggle {
@@ -93,15 +117,15 @@ nav a {
   opacity: 0;
   transition: opacity 100ms ease-in-out;
 }
-nav .active{
+nav .active {
   background: var(--gold);
-  padding: .5em;
-  border-radius:.3em;
+  padding: 0.5em;
+  border-radius: 0.3em;
   width: 100%;
   transition: transform 400ms ease-in-out;
 }
-nav .active:hover{
-  border-radius: 0 0 .3em .3em;
+nav .active:hover {
+  border-radius: 0 0 0.3em 0.3em;
   background: var(--blue);
 }
 
@@ -126,6 +150,7 @@ nav a:hover {
     height: 4em;
     display: grid;
     grid-template-columns: 1fr auto minmax(300px, 1fr) 1fr;
+    align-items: center;
   }
   .logo {
     grid-column: 2/3;
@@ -209,18 +234,20 @@ nav a:hover {
 
 .hero-text {
   position: absolute;
-  top: 40%;
-  left: 25%;
+  width: 100%;
+  top: 20%;
   right: auto;
   align-self: center;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
   transition: translate(-50%, -50%);
 }
-.short-text{
-    top: 30%;
-    left: 45%;
+.short-text {
+  top: 10%;
+  text-align: center;
 }
-.short{
-    max-height: 50vh;
+.short {
+  max-height: 50vh;
 }
 
 @media screen and (max-width: 750px) {
@@ -230,10 +257,10 @@ nav a:hover {
     max-width: 70%;
     text-align: center;
   }
-  .short-text{
+  .short-text {
     top: 25%;
     text-align: center;
-}
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -274,16 +301,85 @@ nav a:hover {
   margin: 1em;
   background: #fff;
 }
-
+.card :is(.heading){
+height: 15em;
+margin: auto;
+}
+.card :is(figcaption){
+  height: 3em;
+  background:  #caa63a1f;
+  border-top: dotted 2px var(--gold);
+}
 .card :is(button) {
   background: var(--gold);
   padding: 0.5em;
   border-style: none;
   border: 1px solid var(--blue);
   border-radius: 0.3em;
+  margin-bottom: 0;
+}
+.card :is(.body){
+  text-align: justify;
 }
 .card-fa {
   font-size: 4em;
+}
+
+/* Vision Mission Values */
+.mission-values-vision {
+  padding: 3em 0.1em 3em 0.1em;
+  background: #fff;
+}
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  padding: 1em;
+  text-align: center;
+}
+.side-text {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  align-items: center;
+  /* padding: 50% 0; */
+}
+.side-text :is(h2) {
+  margin: 25% auto;
+}
+.mission {
+  grid-column: 2/5;
+  grid-row: 1;
+}
+.vision {
+  grid-column: 2/5;
+  grid-row: 2;
+}
+.values {
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+.vision,
+.mission {
+  margin: auto 1em auto 1em;
+}
+
+.values :is(ul) {
+  padding: 0.1em;
+}
+.values :is(li) {
+  display: flex;
+  text-align: start;
+  margin: 0.3em;
+  padding: 1em 0.1em 1em 0.1em;
+  border-radius: 0.3em;
+}
+.values {
+  text-align: center;
+}
+.mission-values-vision :is(h2) {
+  text-align: center;
+}
+.mission-values-vision :is(article) {
+  text-align: justify;
 }
 
 /* Sponsors Section */
@@ -317,25 +413,22 @@ footer {
   padding: 1em;
   height: auto;
 }
-.Site-map{
+.Site-map {
   margin: 1em;
 }
 
-.logo-name{
+.logo-name {
   display: flex;
   justify-content: flex-end;
 }
 
-.name-and-address{
-  padding:1em;
+.name-and-address {
+  padding: 1em;
 }
-.phone-numbers{
+.phone-numbers {
   display: flex;
   justify-content: space-between;
 }
-
-
-
 
 h1,
 h2,
@@ -355,20 +448,19 @@ footer ul {
   padding: 0;
 }
 
-.contact-form{
+.contact-form {
   margin: 1em 1em 1em 1em;
 }
 
 footer form {
-
   display: grid;
   grid-template-columns: 1fr;
-  margin:auto;
+  margin: auto;
   row-gap: 0.1em;
 }
 
-.contact-details{
-    margin: 1em;
+.contact-details {
+  margin: 1em;
 }
 @media screen and (max-width: 850px) {
   footer {
@@ -443,7 +535,9 @@ footer button {
 .services {
   margin: 3em auto 3em auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .service {
   width: 90%;
@@ -454,6 +548,14 @@ footer button {
   grid-template-columns: repeat(4, 1fr);
   padding: 1em;
 }
+.blue-line {
+  min-height: 0.5em;
+  background: var(--blue);
+}
+.gold-line {
+  min-height: 0.3em;
+  background: var(--gold);
+}
 .icon {
   grid-column: 1/2;
   font-size: 6em;
@@ -461,8 +563,8 @@ footer button {
 .service .service-discription {
   text-align: justify;
 }
-.services .header{
-    grid-column: 1/5;
+.services .header {
+  grid-column: 1/5;
 }
 .services .header .icon {
   grid-column: 1/2;
@@ -492,18 +594,18 @@ footer button {
 
 /* Contact Page */
 
-.main-content{
-    display: flex;
-    margin: 6em 0 3em 0;
+.main-content {
+  display: flex;
+  margin: 6em 0 3em 0;
 }
-.contact-page form{
-    padding: 0 1em 0 1em;
-    display: grid;
-    row-gap: .3em;
+.contact-page form {
+  padding: 0 1em 0 1em;
+  display: grid;
+  row-gap: 0.3em;
 }
 #map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-  }
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
