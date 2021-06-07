@@ -746,13 +746,3 @@ footer button {
   transform: scale(1.5,1.3);
   text-transform: uppercase;
 }
-.contact-form-button{
-  transition: transform .3s ease-in-out;
-}
-.contact-form-button:hover{
-  color: var(--gold);
-  background: var(--blue);
-  box-shadow: 1px 1px 1px 1px var(--gold);
-  transform: scale(1.5,1.3);
-  text-transform: uppercase;
-}
