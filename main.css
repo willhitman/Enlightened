@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-
+html{
+  scroll-behavior: smooth;
+}
 :root {
   --background: rgba(255, 255, 255, 0.8);
   --blue: #32375d;
@@ -12,8 +14,10 @@
   box-sizing: border-box;
 }
 
-
-
+.link{
+  text-decoration: none;
+  color: inherit;
+}
 
 h1{
   font-size: 5.50em; 
