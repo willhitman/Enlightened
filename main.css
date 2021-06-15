@@ -506,8 +506,8 @@ margin: auto;
 }
 .client {
   margin-top: 1em;
-  height: 6em;
-  width: 8em;
+  max-height: 10em;
+  max-width: 15em;
   background: var(--gold);
   border-radius: 0.3em;
 }
