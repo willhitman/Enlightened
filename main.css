@@ -634,7 +634,6 @@ footer button {
 .text-body :is(h3){
   font-size: 1.04em;
   font-weight: bold;
-  text-align: center;
 }
 .text-body :is(h2){
  letter-spacing: .07em;
@@ -643,6 +642,7 @@ footer button {
   text-align: justify;
   padding-top: 1em;;
 }
+
 .icon{
   margin: 0;
   padding: 1em auto auto auto;
@@ -790,4 +790,12 @@ footer button {
 }
 .copywrite :is(p){
   font-weight: bold;
+}
+.committment{
+  text-align: center;
+
+}
+.committment :is(li){
+  list-style: none;
+  padding: .6fem;
 }
