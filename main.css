@@ -642,7 +642,9 @@ footer button {
   text-align: justify;
   padding-top: 1em;;
 }
-
+.intro-header{
+  font-size:3em ;
+}
 .icon{
   margin: 0;
   padding: 1em auto auto auto;
