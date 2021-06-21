@@ -450,6 +450,7 @@ nav a:hover {
 .values {
   grid-column: 2/4;
   grid-row: 3/4;
+  align-items: center;
 }
 @media screen and (max-width: 950px) {
   .side-text {
@@ -483,15 +484,27 @@ nav a:hover {
 .mission {
   margin: auto 1em auto 1em;
 }
-
-.values :is(ul) {
-  padding: 0.1em;
+.values-lists{
+  margin: 0;
+  padding: 1em;
+}
+.committment{
+  margin: 0;
+  padding: 1em;
+}
+.committment :is(ul){
+  margin: 0;
+  padding: 0;
+}
+.committment :is(li){
+  margin: 0;
+  padding: 1em;
 }
 .values :is(li) {
   display: flex;
   text-align: start;
-  margin: 0.3em;
-  padding: 1em 0.1em 1em 0.1em;
+  /* margin: 0.3em; */
+  /* padding: 1em 0.1em 1em 0.1em; */
   border-radius: 0.3em;
 }
 .values {
